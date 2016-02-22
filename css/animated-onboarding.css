@@ -46,6 +46,9 @@ body {
       background: #777;
       background: rgba(0, 0, 0, 0.7);
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); } }
+  @media (min-width: 960px) {
+    .OnboardingContent {
+      padding: 20px 40px; } }
 
 .OnboardingContent-block {
   color: #f9f9f9;
@@ -63,10 +66,16 @@ body {
 @media (min-width: 600px) {
   .OnboardingContent-block--login {
     padding-right: 20px; } }
+@media (min-width: 960px) {
+  .OnboardingContent-block--login {
+    padding-right: 40px; } }
 
 @media (min-width: 600px) {
   .OnboardingContent-block--signUp {
     padding-left: 20px; } }
+@media (min-width: 960px) {
+  .OnboardingContent-block--signUp {
+    padding-left: 40px; } }
 
 .OnboardingForms-blockTitle,
 .OnboardingContent-blockTitle {
@@ -85,6 +94,9 @@ body {
   border-radius: 5px;
   display: inline-block;
   text-decoration: none; }
+
+.OnboardingContent-info {
+  margin: 0 0 20px; }
 
 .OnboardingForms {
   background: #fff;
@@ -121,7 +133,7 @@ body {
       width: 50%;
       float: left;
       height: 100%;
-      padding-top: 50px; } }
+      padding-top: 40px; } }
   .OnboardingForms-form input {
     display: block;
     margin-bottom: 10px;

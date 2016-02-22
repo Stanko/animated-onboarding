@@ -19,6 +19,13 @@ $breakpoint-lg: 960px !default;
   }
 }
 
+// Medium breakpoint
+@mixin lg {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
 body {
   margin: 0;
   background: #0048A4;
@@ -72,6 +79,10 @@ body {
     background: rgba(0,0,0,0.7);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
   }
+
+  @include lg {
+    padding: 20px 40px;
+  }
 }
 
 .OnboardingContent-block {
@@ -94,11 +105,19 @@ body {
   @include md {
     padding-right: 20px;
   }
+
+  @include lg {
+    padding-right: 40px;
+  }
 }
 
 .OnboardingContent-block--signUp {
   @include md {
     padding-left: 20px;
+  }
+
+  @include lg {
+    padding-left: 40px;
   }
 }
 
@@ -120,6 +139,10 @@ body {
   border-radius: 5px;
   display: inline-block;
   text-decoration: none;
+}
+
+.OnboardingContent-info {
+  margin: 0 0 20px;
 }
 
 .OnboardingForms {
@@ -165,7 +188,7 @@ body {
     width: 50%;
     float: left;
     height: 100%;
-    padding-top: 50px;
+    padding-top: 40px;
   }
 
   input {
