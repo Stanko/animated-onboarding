@@ -1,6 +1,6 @@
 # Animated onboarding
 
-Login and Sign Up forms animated. Responsive, IE9+ and all modern browsers.
+Login and Sign Up forms animated, CSS only. Responsive, IE9+ and all modern browsers. 
 
 Based on [this Dribbble](https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Login-Animated-Download-Template).
 
