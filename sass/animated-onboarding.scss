@@ -1,0 +1,239 @@
+/*
+ * Breakpoints
+ */
+
+$breakpoint-md: 600px !default;
+$breakpoint-lg: 960px !default;
+
+// Small (default) breakpoint
+@mixin sm-only {
+  @media (max-width: $breakpoint-md - 1) {
+    @content;
+  }
+}
+
+// Medium breakpoint
+@mixin md {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  background: #0048A4;
+}
+
+.Background {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0048A4 url('../img/bg.jpg') no-repeat top center;
+  background-size: cover;
+  z-index: -1;
+}
+
+.Onboarding * {
+  box-sizing: border-box;
+}
+
+.Onboarding {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  max-width: 900px;
+  position: relative;
+  margin: 100px auto;
+  font-weight: 300;
+
+  @include sm-only {
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    border-radius: 5px;
+  }
+}
+
+.Onboarding-inner {
+  padding: 0 0 20px;
+
+  @include md {
+    padding: 20px 0;
+  }
+}
+
+.OnboardingContent {
+  border-radius: 5px;
+  padding: 20px;
+  overflow: hidden;
+
+  @include md {
+    background: #777;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  }
+}
+
+.OnboardingContent-block {
+  color: #f9f9f9;
+  transition: all 0.25s;
+
+  @include md {
+    width: 50%;
+    float: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+
+.OnboardingContent-block--login {
+  @include sm-only {
+    display: none;
+  }
+
+  @include md {
+    padding-right: 20px;
+  }
+}
+
+.OnboardingContent-block--signUp {
+  @include md {
+    padding-left: 20px;
+  }
+}
+
+.OnboardingForms-blockTitle,
+.OnboardingContent-blockTitle {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 300;
+}
+
+.OnboardingContent-blockButton {
+  background: none;
+  border: 2px solid #f9f9f9;
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+  width: 100px;
+  color: #f9f9f9;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.OnboardingForms {
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  overflow: hidden;
+  margin: 0 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+
+  @include md {
+    width: calc(50% - 20px);
+    position: absolute;
+    left: 20px;
+    top: 0;
+    height: 100%;
+    margin: 0;
+  }
+}
+
+.OnboardingForms-inner {
+  transition: all 0.5s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  white-space: nowrap;
+  position: relative;
+
+  @include sm-only {
+    // transform: translateX(-100%);
+  }
+
+  @include md {
+    width: 200%;
+    height: 100%;
+  }
+}
+
+.OnboardingForms-form {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: inline-block;
+
+  @include md {
+    width: 50%;
+    float: left;
+    height: 100%;
+    padding-top: 50px;
+  }
+
+  input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    outline: none;
+    transition: all 0.25s;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-appearance: none;
+    border-radius: 0;
+
+    &:focus {
+      border-color: #999;
+    }
+  }
+}
+
+.OnboardingForms-blockTitle {
+  color: #F88B77;
+}
+
+.OnboardingForms-blockButton {
+  background: #F88B77;
+  border: 2px solid #F88B77;
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+  width: 140px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+
+  @include md {
+    margin-top: 40px;
+  }
+}
+
+
+#login:target .OnboardingForms {
+  @include md {
+    transform: translateX(100%);
+  }
+}
+
+#login:target .OnboardingForms-inner {
+  @include sm-only {
+    transform: translateX(-100%);
+  }
+
+  @include md {
+    transform: translateX(-50%);
+  }
+}
+
+#login:target .OnboardingContent-block--login {
+  @include sm-only {
+    display: block;
+  }
+}
+
+#login:target .OnboardingContent-block--signUp {
+  @include sm-only {
+    display: none;
+  }
+}

@@ -1,0 +1,176 @@
+/*
+ * Breakpoints
+ */
+body {
+  margin: 0;
+  background: #0048A4; }
+
+.Background {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #0048A4 url("../img/bg.jpg") no-repeat top center;
+  background-size: cover;
+  z-index: -1; }
+
+.Onboarding * {
+  box-sizing: border-box; }
+
+.Onboarding {
+  font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  max-width: 900px;
+  position: relative;
+  margin: 100px auto;
+  font-weight: 300; }
+  @media (max-width: 599px) {
+    .Onboarding {
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      border-radius: 5px; } }
+
+.Onboarding-inner {
+  padding: 0 0 20px; }
+  @media (min-width: 600px) {
+    .Onboarding-inner {
+      padding: 20px 0; } }
+
+.OnboardingContent {
+  border-radius: 5px;
+  padding: 20px;
+  overflow: hidden; }
+  @media (min-width: 600px) {
+    .OnboardingContent {
+      background: #777;
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); } }
+
+.OnboardingContent-block {
+  color: #f9f9f9;
+  transition: all 0.25s; }
+  @media (min-width: 600px) {
+    .OnboardingContent-block {
+      width: 50%;
+      float: left;
+      padding-top: 40px;
+      padding-bottom: 40px; } }
+
+@media (max-width: 599px) {
+  .OnboardingContent-block--login {
+    display: none; } }
+@media (min-width: 600px) {
+  .OnboardingContent-block--login {
+    padding-right: 20px; } }
+
+@media (min-width: 600px) {
+  .OnboardingContent-block--signUp {
+    padding-left: 20px; } }
+
+.OnboardingForms-blockTitle,
+.OnboardingContent-blockTitle {
+  margin: 0 0 20px;
+  font-size: 28px;
+  font-weight: 300; }
+
+.OnboardingContent-blockButton {
+  background: none;
+  border: 2px solid #f9f9f9;
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+  width: 100px;
+  color: #f9f9f9;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none; }
+
+.OnboardingForms {
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.5s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  overflow: hidden;
+  margin: 0 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); }
+  @media (min-width: 600px) {
+    .OnboardingForms {
+      width: calc(50% - 20px);
+      position: absolute;
+      left: 20px;
+      top: 0;
+      height: 100%;
+      margin: 0; } }
+
+.OnboardingForms-inner {
+  transition: all 0.5s cubic-bezier(0.53, -0.67, 0.73, 0.74);
+  white-space: nowrap;
+  position: relative; }
+  @media (min-width: 600px) {
+    .OnboardingForms-inner {
+      width: 200%;
+      height: 100%; } }
+
+.OnboardingForms-form {
+  position: relative;
+  padding: 20px;
+  width: 100%;
+  display: inline-block; }
+  @media (min-width: 600px) {
+    .OnboardingForms-form {
+      width: 50%;
+      float: left;
+      height: 100%;
+      padding-top: 50px; } }
+  .OnboardingForms-form input {
+    display: block;
+    margin-bottom: 10px;
+    padding: 6px;
+    border: 0;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    outline: none;
+    transition: all 0.25s;
+    font-family: Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    -webkit-appearance: none;
+    border-radius: 0; }
+    .OnboardingForms-form input:focus {
+      border-color: #999; }
+
+.OnboardingForms-blockTitle {
+  color: #F88B77; }
+
+.OnboardingForms-blockButton {
+  background: #F88B77;
+  border: 2px solid #F88B77;
+  font-size: 16px;
+  padding: 8px;
+  text-align: center;
+  width: 140px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px; }
+  @media (min-width: 600px) {
+    .OnboardingForms-blockButton {
+      margin-top: 40px; } }
+
+@media (min-width: 600px) {
+  #login:target .OnboardingForms {
+    transform: translateX(100%); } }
+
+@media (max-width: 599px) {
+  #login:target .OnboardingForms-inner {
+    transform: translateX(-100%); } }
+@media (min-width: 600px) {
+  #login:target .OnboardingForms-inner {
+    transform: translateX(-50%); } }
+
+@media (max-width: 599px) {
+  #login:target .OnboardingContent-block--login {
+    display: block; } }
+
+@media (max-width: 599px) {
+  #login:target .OnboardingContent-block--signUp {
+    display: none; } }
