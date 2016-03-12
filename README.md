@@ -6,7 +6,7 @@ Based on [this Dribbble](https://dribbble.com/shots/2311260-Day-1-Sign-Up-and-Lo
 
 ### [Demo](http://stanko.github.io/animated-onboarding/).
 
-[![](http://i.imgur.com/ZbZJqYl.png)](http://stanko.github.io/animated-onboarding/)
+[![](http://stanko.github.io/public/img/projects/animated-onboarding.png)](http://stanko.github.io/animated-onboarding/)
 
 Licenced under [MIT license](https://github.com/Stanko/animated-onboarding/blob/gh-pages/LICENSE.md).
 
